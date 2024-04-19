@@ -1,5 +1,5 @@
 // API key for OpenWeatherMap
-const apiKey = "d693b065359d8dc36c66419a752786e5"; // Replace with your actual API key
+const apiKey = "d693b065359d8dc36c66419a752786e5";
 
 // Get references to DOM elements
 const searchBox = document.querySelector(".search input");
