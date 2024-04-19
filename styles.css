@@ -11,10 +11,10 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Set height of body to viewport height */
 }
 
 /* Video styling */
@@ -25,9 +25,10 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  object-fit: cover; 
+  object-fit: cover; /* Cover the entire screen */
 }
 
+/* Top bar styles */
 .top-bar {
   position: fixed;
   top: 0;
@@ -37,16 +38,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; 
+  z-index: 2; /* Ensures it is above the video */
+}
 
 .logo {
-  width: 50px; 
+  width: 50px; /* Adjust the size of the logo as desired */
 }
 
 /* Style the title (h1) in the top bar */
 .top-bar h1 {
-  font-size: 24px; 
-  color: #fff; 
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #fff; /* Font color white */
+  margin-left: 10px; /* Add some space between the logo and the title */
+}
 
 /* Card styling */
 .card {
@@ -103,6 +107,21 @@ body {
 .weather-icon {
   width: 150px;
   margin-top: 20px;
+  /* Apply swaying animation to the weather icon */
+  animation: sway 3s infinite; \
+}
+
+/* Keyframes for swaying animation */
+@keyframes sway {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
 
 /* Weather temperature styles */
@@ -161,4 +180,73 @@ body {
   font-size: 14px;
   margin-top: 10px;
   display: none;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Use full width of screen */
+    padding: 20px;
+  }
+
+  .weather h1 {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+
+  .weather h2 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust search input and button size */
+  .search input {
+    font-size: 14px;
+  }
+
+  .search button {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Adjust weather icon size */
+  .weather-icon {
+    width: 100px;
+  }
+
+  /* Adjust column image size */
+  .col img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 480px) {
+  .weather h1 {
+    font-size: 40px;
+  }
+
+  .weather h2 {
+    font-size: 25px;
+  }
+
+  /* Adjust search input and button size */
+  .search input {
+    font-size: 12px;
+  }
+
+  .search button {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Adjust weather icon size */
+  .weather-icon {
+    width: 80px;
+  }
+
+  /* Adjust column image size */
+  .col img {
+    width: 30px;
+    height: 30px;
+  }
 }

@@ -1,5 +1,5 @@
 // API key for OpenWeatherMap
-const apiKey = "d693b065359d8dc36c66419a752786e5";
+const apiKey = "d693b065359d8dc36c66419a752786e5"; // Replace with your actual API key
 
 // Get references to DOM elements
 const searchBox = document.querySelector(".search input");
@@ -68,6 +68,10 @@ async function checkWeather(city) {
       case "Snow":
         weatherIcon.src = "images/snow.png";
         weatherVideo.src = "videos/snow.mp4";
+        break;
+      case "Smoke":
+        weatherIcon.src = "images/smoke.png";
+        weatherVideo.src = "videos/smoke.mp4";
         break;
       default:
         weatherIcon.src = "images/unknown.png";
